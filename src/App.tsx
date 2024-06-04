@@ -1,11 +1,10 @@
-import { TaskProps } from "./components/Task/Task";
-import TaskList from "./components/TaskList/TaskList";
 import "./App.css";
+import MessageThread from "./components/MessageThread/MessageThread";
 
 function App() {
   return (
     <div className="App">
-      <TaskList />
+      <MessageThread />
     </div>
   );
 }
