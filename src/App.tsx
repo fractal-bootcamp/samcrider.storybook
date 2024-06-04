@@ -1,4 +1,4 @@
-import { TaskProps } from "./components/Task";
+import { TaskProps } from "./components/Task/Task";
 import TaskList from "./components/TaskList/TaskList";
 import "./App.css";
 

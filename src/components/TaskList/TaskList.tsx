@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Task from "../Task";
+import Task from "../Task/Task";
 import s from "./styles.module.css";
 
 type TaskType = {

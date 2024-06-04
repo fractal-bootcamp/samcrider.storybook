@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react/*";
-import Task from "../components/Task";
+import Task from "../components/Task/Task";
 import { fn } from "@storybook/test";
 
 const meta = {
