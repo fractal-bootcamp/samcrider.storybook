@@ -1,0 +1,59 @@
+.taskContainer {
+  width: 462px;
+  height: fit-content;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.taskContainerComplete {
+  width: 462px;
+  height: fit-content;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #e2ffe5;
+}
+
+.buttonContainer {
+  display: flex;
+  padding: 24px 12px;
+}
+
+.button {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+}
+
+.buttonComplete {
+  background-color: #359845;
+  width: 25px;
+  height: 25px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: left;
+  color: #7d7d7d;
+}
