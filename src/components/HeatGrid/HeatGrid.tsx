@@ -10,12 +10,10 @@ const days = [
   { id: 5, day: "Sat" },
   { id: 6, day: "Sun" },
 ];
-
 const data = ["#f0f6fc", "#c5d9ed", "#9ec2e6", "#72aee6", "#4f94d4", "#3582c4"];
-const randomizedData = data
-  .map((value) => ({ value, sort: Math.random() }))
-  .sort((a, b) => a.sort - b.sort)
-  .map(({ value }) => value);
+
+// just for mapping purposes
+const dayColumn = [0, 1, 2, 3, 4, 5];
 
 const HeatGrid = () => {
   return (
@@ -24,11 +22,10 @@ const HeatGrid = () => {
         return (
           <div key={d.id} className={s.dayColumn}>
             {d.day}
-            <GridBlock dataColor={randomizedData[0]} />
-            <GridBlock dataColor={randomizedData[1]} />
-            <GridBlock dataColor={randomizedData[2]} />
-            <GridBlock dataColor={randomizedData[3]} />
-            <GridBlock dataColor={randomizedData[4]} />
+            {dayColumn.map((day) => {
+              const randomNum = Math.floor(Math.random() * (6 - 1 + 1) + 1);
+              return <GridBlock key={day} dataColor={data[randomNum]} />;
+            })}
           </div>
         );
       })}
