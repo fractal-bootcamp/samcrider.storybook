@@ -1,19 +1,23 @@
 import { useState } from "react";
 import s from "./styles.module.css";
 
-type TaskProps = {
+export type TaskProps = {
   title: string;
   description: string;
+  id: number;
 };
 
-const Task = ({ title, description }: TaskProps) => {
+const Task = ({ title, description, id }: TaskProps) => {
   const [complete, setComplete] = useState<boolean>(false);
 
   const handleClick = () => {
     setComplete(!complete);
   };
   return (
-    <div className={complete ? s.taskContainerComplete : s.taskContainer}>
+    <div
+      id={String(id)}
+      className={complete ? s.taskContainerComplete : s.taskContainer}
+    >
       <div className={s.buttonContainer}>
         <button
           onClick={() => handleClick()}

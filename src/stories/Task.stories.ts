@@ -18,5 +18,6 @@ export const PrimaryCard: Story = {
   args: {
     title: "Go do the Dishes",
     description: "Clean them all over, buddy.",
+    id: 0,
   },
 };

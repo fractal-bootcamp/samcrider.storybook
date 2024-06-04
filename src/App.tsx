@@ -1,12 +1,19 @@
-import React from "react";
-import logo from "./logo.svg";
+import { TaskProps } from "./components/Task";
+import TaskList from "./components/TaskList/TaskList";
 import "./App.css";
-import Task from "./components/Task";
+
+const tasks: TaskProps[] = [
+  { title: "first task", description: "first task description", id: 0 },
+  { title: "first task", description: "first task description", id: 0 },
+  { title: "first task", description: "first task description", id: 0 },
+  { title: "first task", description: "first task description", id: 0 },
+  { title: "first task", description: "first task description", id: 0 },
+];
 
 function App() {
   return (
     <div className="App">
-      <Task description="this is a task, do it" title="title of task" />
+      <TaskList tasks={tasks} />
     </div>
   );
 }
