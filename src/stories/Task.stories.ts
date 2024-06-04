@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react/*";
 import Task from "../components/Task";
+import { fn } from "@storybook/test";
 
 const meta = {
   title: "DisplayItems/Task",
@@ -14,10 +15,23 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const PrimaryCard: Story = {
+const DefaultTask = {
+  title: "Go do the Dishes",
+  description: "Clean them all over, buddy.",
+  id: 0,
+  toggleCompleted: fn(),
+};
+
+export const CompletedTask: Story = {
   args: {
-    title: "Go do the Dishes",
-    description: "Clean them all over, buddy.",
-    id: 0,
+    ...DefaultTask,
+    completed: true,
+  },
+};
+
+export const IncompleteTask: Story = {
+  args: {
+    ...DefaultTask,
+    completed: false,
   },
 };
