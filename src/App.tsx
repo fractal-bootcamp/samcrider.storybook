@@ -1,10 +1,10 @@
 import "./App.css";
-import HeatGrid from "./components/HeatGrid/HeatGrid";
+import TabDescriptor from "./components/TabDescriptor/TabDescriptor";
 
 function App() {
   return (
     <div className="App">
-      <HeatGrid />
+      <TabDescriptor />
     </div>
   );
 }
