@@ -10,7 +10,7 @@ const TabContent = ({ currentTab }: TabContentProps) => {
     <div className={s.contentContainer}>
       <img
         src={currentTab.image}
-        alt="image"
+        alt={currentTab.name}
         width={48}
         height={48}
         className={s.image}
